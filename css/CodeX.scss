@@ -305,7 +305,7 @@
                         font-family:$font-family-ExpletusSans-bold;
                         @media screen and (max-width : 900px){
                             font-size: 12px;
-                            
+                            width:80px;  
                         }
         
                         &:hover{                  
@@ -472,6 +472,15 @@
         justify-content: space-around;
         flex-wrap: wrap;
         margin: 0px auto 100px auto;
+        @media screen and (max-width : 900px){
+            padding-left: 10px;
+            padding-right: 10px;
+
+
+        }
+
+
+        
         .one-pro{
             width: 400px;
             margin:15px auto 15px auto;
@@ -479,6 +488,7 @@
             .img-pro-1 , .img-pro-2 , .img-pro-3 , .img-pro-4{
                 background-image: url(/img/pro2.png);
                 @extend %img-pro;
+
             }
             .tools-pro {
                 width: 100%;
@@ -547,6 +557,13 @@ footer {
         .copy{
             margin-top: 100px;
             font-weight: bold;
+            @media screen and (max-width : 900px){
+                font-size: 30px;
+                margin: auto;
+           
+            }
+
+
         }
     }
 }

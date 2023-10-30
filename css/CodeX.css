@@ -259,6 +259,7 @@ body nav .navbar ul a li {
 @media screen and (max-width: 900px) {
   body nav .navbar ul a li {
     font-size: 12px;
+    width: 80px;
   }
 }
 body nav .navbar ul a li:hover {
@@ -415,6 +416,12 @@ body nav .navbar ul a li:hover {
   flex-wrap: wrap;
   margin: 0px auto 100px auto;
 }
+@media screen and (max-width: 900px) {
+  .Projects-sec .All-Projects {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .Projects-sec .All-Projects .one-pro {
   width: 400px;
   margin: 15px auto 15px auto;
@@ -474,4 +481,10 @@ footer .conict img:hover {
 footer .conict .copy {
   margin-top: 100px;
   font-weight: bold;
+}
+@media screen and (max-width: 900px) {
+  footer .conict .copy {
+    font-size: 30px;
+    margin: auto;
+  }
 }/*# sourceMappingURL=CodeX.css.map */
