@@ -1,0 +1,546 @@
+@font-face {
+    font-family: "Philosopher";
+    src: url("../webfonts/Philosopher-Bold.ttf")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: "FiraSans";
+    src: url("../webfonts/FiraSans-Regular.ttf")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: "e-Black";
+    src: url("../webfonts/ExpletusSans-Medium.ttf")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+  
+@font-face {
+    font-family: "ExpletusSans-bold";
+    src: url("../webfonts/ExpletusSans-Bold.ttf")format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+  }
+
+ $bg-color-body : #d2e0e6;
+ $bg-color-2 : #2980b9;
+ $font-color : #0e69a5;
+ $font-family-e-Black : "e-Black";
+ $font-family-Philosopher:"Philosopher";
+ $font-family-ExpletusSans-bold:"ExpletusSans-bold";
+ $shadow-1:1px 3px 5px #0d0e0ea1;
+
+
+
+
+
+%color-blur {
+    backdrop-filter: blur(7px);
+    background-image:linear-gradient(150deg ,#d2e0e6a2 15%, #297fb9d3 100% );
+
+}
+
+%color-gradient-sec{
+    background-color: #2980b9;
+    background-image:radial-gradient(farthest-corner at 20px 20px, #d2e0e69f 10%, #2980b9 100%);
+    backdrop-filter: blur(12px);
+}
+
+%animation{
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-duration: 2s;
+    animation-name: sec-name;
+    @keyframes  sec-name {
+        0% {
+          transform: translateY(0px);
+        }
+      
+        50% {
+          transform: translateY(-6px);
+        }
+      
+        to {
+          transform: translateY(0px);
+        }
+    }
+}
+
+%sec-name{
+    width: 100%;
+    font-size: 36px;
+    font-weight: 900;
+    font-family: $font-family-ExpletusSans-bold;
+    color: #27ae60;
+    @extend %animation;
+    @media screen and (max-width : 900px){
+        font-size: 25px;
+    }
+
+    span{
+        color: $font-color;
+    }
+ 
+}
+
+%img-pro{
+    width: 410px;
+    height: 200px;
+    margin:15px auto 15px auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    box-shadow: $shadow-1;
+    &:hover{
+        transform:scale(1.02);
+        transition-duration: 0.3s;
+    
+    }
+    
+}
+
+%animation-logo {
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration:4s;
+    animation-name: logo;
+
+    @keyframes  logo {
+        0% {
+            opacity:0% ;
+          }
+
+          10% {
+            opacity:2% ;
+            transform: scale(0.98);  
+          }
+
+
+        
+        80% {
+            opacity:40%; 
+            transform: scale(1);  
+ 
+          }
+        
+          90% {
+            opacity:60%; 
+ 
+          }
+
+          100% {
+             opacity:100%;
+  
+    
+          }
+      }
+}
+
+%animation-X {
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration:5s;
+    animation-name: x ;
+
+    @keyframes  x {
+        0% {
+          opacity:0% ;  
+        }
+      
+        80% {
+          opacity:0%;
+  
+        }
+      
+        90% {
+          opacity:50%;
+          
+        }
+        100% {   
+           opacity:100%;
+           
+        }
+    }    
+}
+
+
+%animation-myNamy {
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration:7s;
+    animation-name: my ;
+    @keyframes  my {
+        0% {
+            opacity: 4%;
+        }
+      
+        70% {
+            opacity: 4%;
+        }
+
+        100% {
+            opacity: 100%;
+        }
+
+    }
+}
+
+%animation-navbar {
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration:9s;
+    animation-name: navbar ;
+    @keyframes navbar {
+        0% {
+            opacity:0% ;
+          }
+        
+          80% {
+            opacity:0%; 
+ 
+          }
+        
+          90% {
+            opacity:60%; 
+          }
+
+          100% {
+             opacity:100%;
+          }
+    }
+}
+
+
+  
+
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: inherit;
+    font-family: inherit;  
+    scroll-behavior: smooth;
+  }
+
+
+  body{
+    background-color: $bg-color-body;
+    nav {
+        position: relative;
+        height: 70px;
+        .navbar {
+            width: 100Vw;
+            height:70px;
+            position: fixed;
+            z-index: 100;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            @extend %color-blur;
+            padding-top: 3px;
+            box-shadow:$shadow-1;
+            @extend %animation-navbar;    
+            .logo {
+                width: 30%;
+                float: left;
+                display: flex;
+                justify-content: center;
+                font-size: 40px;
+                font-weight: 700;
+                @extend %animation;  
+                @media screen and (max-width : 900px){
+                    display: none;
+                }
+                .codeX {
+                    color: #27ae60;
+                    font-family:$font-family-ExpletusSans-bold ;
+                    span{
+                        color: $font-color;
+                        font-family: "Philosopher";
+                    }
+                }
+                
+            }
+            ul {
+                width: 70%;
+                height: 100%;
+                padding-top: 10px;
+                float: left;
+                list-style: none;
+                display: flex;
+                align-items: center;
+                gap: 2%;
+                @media screen and (max-width : 900px){
+                }
+                font-size: 1rem ;
+                gap: 1%;
+
+                a{
+                    text-decoration: none;
+                    li{
+                        height: 100%; 
+                        width: 120px;
+                        margin-left: 2%;
+                        padding: 20px 0 20px 0;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color:$font-color;
+                        font-size:1.1rem;
+                        letter-spacing: 1px;
+                        font-weight: bolder;
+                        font-family:$font-family-ExpletusSans-bold;
+                        &:hover{                  
+                            background-color: $bg-color-body;
+                            color: $bg-color-2;
+                            border-radius: 10px 10px 0 0 ;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+}
+
+// ------------------------------------------------
+
+.container{
+    width: 95%;
+    margin: auto;
+    .main-sec{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width : 900px){
+            margin: 0px;
+        }
+            .code-X {
+                display: inline-block;
+                padding-top: 90px;
+                font-size: 200px;
+                font-weight: 700;
+                color: #27ae60;
+                font-family:$font-family-ExpletusSans-bold ;
+                @extend %animation-logo;
+                @media screen and (max-width : 900px){
+                    padding-top: 100px;
+                    padding-bottom: 30px;
+                
+                    font-size: 90px;
+               }
+                span{
+                    height: 100px;
+                    width: 100px;
+                    color: $font-color;
+                    font-size: 200px;
+                    font-family: "Philosopher";
+                    margin-left: 30px;
+                    font-weight: bolder;
+                    @extend %animation-X;
+                    @media screen and (max-width : 900px){
+                        font-size: 90px;
+                        margin-left: 10px;
+                    }
+    
+                }
+            }  
+        .text-box {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            color: $font-color;
+            @media screen and (max-width : 900px){
+                width: 100%;
+                font-size: 10px;
+            }
+
+            @extend %animation-myNamy;
+            .text{
+                font-size: 30px;
+                font-weight: bolder;
+                font-family: $font-family-Philosopher;
+                letter-spacing: 2px;
+                margin-bottom: 15px;
+                @media screen and (max-width : 900px){
+                    width: 100%;
+                    font-size: 20px;
+                }
+            }
+            .my-name {
+                font-size: 40px;
+                font-weight: bolder;
+                font-family: $font-family-ExpletusSans-bold;
+                margin-bottom: 5px;
+                color: #27ae60;
+                @media screen and (max-width : 900px){
+                    font-size:20px;
+                }
+
+            }
+            .my-title{
+                font-size:35px;
+                font-weight: bolder;
+                font-family: $font-family-ExpletusSans-bold;
+                color: #27ae60;
+                @media screen and (max-width : 900px){
+                    font-size: 20px;
+                }
+
+
+            }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+.Skills{
+    position: relative;
+    width: 100%;
+    margin: 0 auto 100px auto;
+    padding-top: 70px;
+    .sec-name-skills{
+        @extend %sec-name;
+        margin:20px 0 10px 20px;
+    }
+    .Skills-Sec{
+            width:100%;
+            min-height: 350px;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            @extend %color-gradient-sec;
+            box-shadow: $shadow-1;
+            border-radius: 10px;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100px;
+                height: 100px;
+                border-radius: 15px;
+                font-family: $font-family-e-Black;
+                font-size: 20px;
+                color: #035f28;
+                span{
+                margin-top: 10px;
+                }
+            }  img{
+                width: 70px;
+                border-radius: 15px;
+                
+            }
+    
+    }
+}
+
+// ------------------------------------------------
+
+.Projects-sec {
+    width: 99%;
+    padding-top:80px;
+    .sec-name-Prev{
+        width: 100%;
+        @extend %sec-name;       
+    }
+    .All-Projects{
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 0px auto 100px auto;
+        .one-pro{
+            width: 400px;
+            margin:15px auto 15px auto;
+            
+            .img-pro-1 , .img-pro-2 , .img-pro-3 , .img-pro-4{
+                background-image: url(/img/pro2.png);
+                @extend %img-pro;
+            }
+            .tools-pro {
+                width: 100%;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                padding: 10px;
+                img {
+                    height: 40px;
+    
+                }
+            }
+        }
+        .one-pro{
+            .img-pro-2{
+                background-image: url(/img/codex.png);                
+            }
+        }
+        .one-pro{
+            .img-pro-3{
+                background-image: url(/img/Screenshot\ 2023-10-22\ 01:08:28.png);                
+            }
+        }
+
+        .one-pro{
+            .img-pro-4{
+                background-image: url(/img/phon.png);                
+            }
+        }
+    }
+}
+
+// ------------------------------------------------
+
+
+.sec-name-cont {
+    @extend %sec-name;
+    margin:20px 0 10px 20px;
+    width: 100%;
+
+}
+footer {
+    height: 250px;
+    width: 100%;
+    background-color: $bg-color-2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family-e-Black;
+    border-radius: 20px;
+    box-shadow: $shadow-1;
+    @extend %color-gradient-sec;
+    .conict{
+        margin-bottom: 25px;
+        img{
+            width: 50px;
+            border-radius: 50%;
+            margin-left: 10px;
+            &:hover{
+                transform:scale(1.04);
+                transition-duration: 0.3s;
+            }
+        
+        }
+        .copy{
+            margin-top: 100px;
+            font-weight: bold;
+        }
+    }
+}
+
+
+  

@@ -1,0 +1,467 @@
+@font-face {
+  font-family: "Philosopher";
+  src: url("../webfonts/Philosopher-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "FiraSans";
+  src: url("../webfonts/FiraSans-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "e-Black";
+  src: url("../webfonts/ExpletusSans-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "ExpletusSans-bold";
+  src: url("../webfonts/ExpletusSans-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body nav .navbar {
+  -webkit-backdrop-filter: blur(7px);
+          backdrop-filter: blur(7px);
+  background-image: linear-gradient(150deg, rgba(210, 224, 230, 0.6352941176) 15%, rgba(41, 127, 185, 0.8274509804) 100%);
+}
+
+footer, .Skills .Skills-Sec {
+  background-color: #2980b9;
+  background-image: radial-gradient(farthest-corner at 20px 20px, rgba(210, 224, 230, 0.6235294118) 10%, #2980b9 100%);
+  -webkit-backdrop-filter: blur(12px);
+          backdrop-filter: blur(12px);
+}
+
+body nav .navbar .logo, .sec-name-cont, .Projects-sec .sec-name-Prev, .Skills .sec-name-skills {
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  animation-duration: 2s;
+  animation-name: sec-name;
+}
+@keyframes sec-name {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-6px);
+  }
+  to {
+    transform: translateY(0px);
+  }
+}
+
+.sec-name-cont, .Projects-sec .sec-name-Prev, .Skills .sec-name-skills {
+  width: 100%;
+  font-size: 36px;
+  font-weight: 900;
+  font-family: "ExpletusSans-bold";
+  color: #27ae60;
+}
+@media screen and (max-width: 900px) {
+  .sec-name-cont, .Projects-sec .sec-name-Prev, .Skills .sec-name-skills {
+    font-size: 25px;
+  }
+}
+.sec-name-cont span, .Projects-sec .sec-name-Prev span, .Skills .sec-name-skills span {
+  color: #0e69a5;
+}
+
+.Projects-sec .All-Projects .one-pro .img-pro-1, .Projects-sec .All-Projects .one-pro .img-pro-2, .Projects-sec .All-Projects .one-pro .img-pro-3, .Projects-sec .All-Projects .one-pro .img-pro-4 {
+  width: 410px;
+  height: 200px;
+  margin: 15px auto 15px auto;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  box-shadow: 1px 3px 5px rgba(13, 14, 14, 0.631372549);
+}
+.Projects-sec .All-Projects .one-pro .img-pro-1:hover, .Projects-sec .All-Projects .one-pro .img-pro-2:hover, .Projects-sec .All-Projects .one-pro .img-pro-3:hover, .Projects-sec .All-Projects .one-pro .img-pro-4:hover {
+  transform: scale(1.02);
+  transition-duration: 0.3s;
+}
+
+.container .main-sec .code-X {
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-name: logo;
+}
+@keyframes logo {
+  0% {
+    opacity: 0%;
+  }
+  10% {
+    opacity: 2%;
+    transform: scale(0.98);
+  }
+  80% {
+    opacity: 40%;
+    transform: scale(1);
+  }
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.container .main-sec .code-X span {
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+  animation-name: x;
+}
+@keyframes x {
+  0% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+.container .main-sec .text-box {
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 7s;
+  animation-name: my;
+}
+@keyframes my {
+  0% {
+    opacity: 4%;
+  }
+  70% {
+    opacity: 4%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+body nav .navbar {
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+  animation-duration: 9s;
+  animation-name: navbar;
+}
+@keyframes navbar {
+  0% {
+    opacity: 0%;
+  }
+  80% {
+    opacity: 0%;
+  }
+  90% {
+    opacity: 60%;
+  }
+  100% {
+    opacity: 100%;
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+  box-sizing: inherit;
+  font-family: inherit;
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: #d2e0e6;
+}
+body nav {
+  position: relative;
+  height: 70px;
+}
+body nav .navbar {
+  width: 100Vw;
+  height: 70px;
+  position: fixed;
+  z-index: 100;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 3px;
+  box-shadow: 1px 3px 5px rgba(13, 14, 14, 0.631372549);
+}
+body nav .navbar .logo {
+  width: 30%;
+  float: left;
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: 700;
+}
+@media screen and (max-width: 900px) {
+  body nav .navbar .logo {
+    display: none;
+  }
+}
+body nav .navbar .logo .codeX {
+  color: #27ae60;
+  font-family: "ExpletusSans-bold";
+}
+body nav .navbar .logo .codeX span {
+  color: #0e69a5;
+  font-family: "Philosopher";
+}
+body nav .navbar ul {
+  width: 70%;
+  height: 100%;
+  padding-top: 10px;
+  float: left;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2%;
+  font-size: 1rem;
+  gap: 1%;
+}
+body nav .navbar ul a {
+  text-decoration: none;
+}
+body nav .navbar ul a li {
+  height: 100%;
+  width: 120px;
+  margin-left: 2%;
+  padding: 20px 0 20px 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0e69a5;
+  font-size: 1.1rem;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  font-family: "ExpletusSans-bold";
+}
+body nav .navbar ul a li:hover {
+  background-color: #d2e0e6;
+  color: #2980b9;
+  border-radius: 10px 10px 0 0;
+}
+
+.container {
+  width: 95%;
+  margin: auto;
+}
+.container .main-sec {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec {
+    margin: 0px;
+  }
+}
+.container .main-sec .code-X {
+  display: inline-block;
+  padding-top: 90px;
+  font-size: 200px;
+  font-weight: 700;
+  color: #27ae60;
+  font-family: "ExpletusSans-bold";
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .code-X {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    font-size: 90px;
+  }
+}
+.container .main-sec .code-X span {
+  height: 100px;
+  width: 100px;
+  color: #0e69a5;
+  font-size: 200px;
+  font-family: "Philosopher";
+  margin-left: 30px;
+  font-weight: bolder;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .code-X span {
+    font-size: 90px;
+    margin-left: 10px;
+  }
+}
+.container .main-sec .text-box {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #0e69a5;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .text-box {
+    width: 100%;
+    font-size: 10px;
+  }
+}
+.container .main-sec .text-box .text {
+  font-size: 30px;
+  font-weight: bolder;
+  font-family: "Philosopher";
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .text-box .text {
+    width: 100%;
+    font-size: 20px;
+  }
+}
+.container .main-sec .text-box .my-name {
+  font-size: 40px;
+  font-weight: bolder;
+  font-family: "ExpletusSans-bold";
+  margin-bottom: 5px;
+  color: #27ae60;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .text-box .my-name {
+    font-size: 20px;
+  }
+}
+.container .main-sec .text-box .my-title {
+  font-size: 35px;
+  font-weight: bolder;
+  font-family: "ExpletusSans-bold";
+  color: #27ae60;
+}
+@media screen and (max-width: 900px) {
+  .container .main-sec .text-box .my-title {
+    font-size: 20px;
+  }
+}
+
+.Skills {
+  position: relative;
+  width: 100%;
+  margin: 0 auto 100px auto;
+  padding-top: 70px;
+}
+.Skills .sec-name-skills {
+  margin: 20px 0 10px 20px;
+}
+.Skills .Skills-Sec {
+  width: 100%;
+  min-height: 350px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1px 3px 5px rgba(13, 14, 14, 0.631372549);
+  border-radius: 10px;
+}
+.Skills .Skills-Sec div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  border-radius: 15px;
+  font-family: "e-Black";
+  font-size: 20px;
+  color: #035f28;
+}
+.Skills .Skills-Sec div span {
+  margin-top: 10px;
+}
+.Skills .Skills-Sec img {
+  width: 70px;
+  border-radius: 15px;
+}
+
+.Projects-sec {
+  width: 99%;
+  padding-top: 80px;
+}
+.Projects-sec .sec-name-Prev {
+  width: 100%;
+}
+.Projects-sec .All-Projects {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin: 0px auto 100px auto;
+}
+.Projects-sec .All-Projects .one-pro {
+  width: 400px;
+  margin: 15px auto 15px auto;
+}
+.Projects-sec .All-Projects .one-pro .img-pro-1, .Projects-sec .All-Projects .one-pro .img-pro-2, .Projects-sec .All-Projects .one-pro .img-pro-3, .Projects-sec .All-Projects .one-pro .img-pro-4 {
+  background-image: url(/img/pro2.png);
+}
+.Projects-sec .All-Projects .one-pro .tools-pro {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+.Projects-sec .All-Projects .one-pro .tools-pro img {
+  height: 40px;
+}
+.Projects-sec .All-Projects .one-pro .img-pro-2 {
+  background-image: url(/img/codex.png);
+}
+.Projects-sec .All-Projects .one-pro .img-pro-3 {
+  background-image: url(/img/Screenshot\ 2023-10-22\ 01:08:28.png);
+}
+.Projects-sec .All-Projects .one-pro .img-pro-4 {
+  background-image: url(/img/phon.png);
+}
+
+.sec-name-cont {
+  margin: 20px 0 10px 20px;
+  width: 100%;
+}
+
+footer {
+  height: 250px;
+  width: 100%;
+  background-color: #2980b9;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "e-Black";
+  border-radius: 20px;
+  box-shadow: 1px 3px 5px rgba(13, 14, 14, 0.631372549);
+}
+footer .conict {
+  margin-bottom: 25px;
+}
+footer .conict img {
+  width: 50px;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+footer .conict img:hover {
+  transform: scale(1.04);
+  transition-duration: 0.3s;
+}
+footer .conict .copy {
+  margin-top: 100px;
+  font-weight: bold;
+}/*# sourceMappingURL=CodeX.css.map */
