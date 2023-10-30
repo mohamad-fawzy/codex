@@ -232,12 +232,14 @@ body nav .navbar ul {
   align-items: center;
   gap: 2%;
 }
-@media screen and (min-width: 500px) {
+@media screen and (max-width: 900px) {
   body nav .navbar ul {
     width: 100%;
-    font-size: 1rem;
+    font-size: 12px;
     gap: 0.5%;
-    margin: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }
 body nav .navbar ul a {
